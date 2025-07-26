@@ -4,22 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kin | Interactive Brand Guidelines</title>
-    <!-- Chosen Palette: Kin Brand Palette (Kin Navy Blue, Kin Black, Soft Grey, Accent Gold) -->
-    <!-- Application Structure Plan: A single-page application with a fixed sidebar for primary navigation and a main content area. This structure was chosen to function like a tool or dashboard, allowing users (designers, developers, marketers) to quickly access specific sections of the brand guide (like Colors or Logo) without linear scrolling. The content for each section is displayed dynamically in the main area, creating a focused and efficient user experience. Interactions are designed to be practical, such as one-click color code copying and interactive typography previews, transforming the static document into a useful utility. -->
-    <!-- Visualization & Content Choices: The static brand guide is converted into interactive components. 1) Logo: Uses a sample image as requested, with clear space and minimum size examples. Goal: Inform/Organize. Method: HTML <img> tag. Justification: Provides a visual representation of the logo. 2) Colors: Interactive swatches. Goal: Inform. Method: HTML grid, JS for copy-to-clipboard. Justification: Most common user need for a brand guide. 3) Typography: Live-rendered text examples. Goal: Inform/Compare. Method: HTML/CSS with Google Fonts. Justification: Shows typefaces in action. 4) Imagery/Tone/Applications: Presented in clean, interactive cards and tabs. Goal: Organize. Method: HTML/Tailwind, JS for tab navigation. Justification: Condenses information effectively. All choices avoid SVG/Mermaid and use standard web tech as required. -->
-    <!-- CONFIRMATION: NO SVG graphics used. NO Mermaid JS used. -->
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Serif+JP:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
     <style>
         body {
             font-family: 'Inter', sans-serif;
             background-color: #F0F0F0;
             color: #000000;
         }
-        .font-noto-serif-jp {
-            font-family: 'Noto Serif JP', serif;
+        .font-playfair-display {
+            font-family: 'Playfair Display', serif;
         }
         .active-nav {
             background-color: #1A237E;
@@ -76,6 +72,7 @@
         <aside class="w-64 bg-white text-black p-4 fixed h-full shadow-lg hidden md:block">
             <div class="flex items-center mb-8">
                 <img src="./images/kin-logo.png" alt="Kin Logo" class="h-10 w-auto object-contain">
+                <span class="text-2xl font-bold ml-2">Kin</span>
             </div>
             <nav id="desktop-nav">
                 <a href="#story" class="nav-item block py-2.5 px-4 rounded transition duration-200 active-nav">Our Story</a>
@@ -115,8 +112,8 @@
             <section id="story" class="content-section active">
                 <h1 class="text-4xl font-bold text-[#1A237E] mb-4">Our Brand Story</h1>
                 <div class="bg-white p-6 rounded-lg shadow-sm">
-                    <p class="mb-4 text-lg">Welcome to the Kin Brand Guidelines. This document outlines the essential elements of the Kin brand, ensuring consistency and clarity in all our communications. Kin is an e-commerce retailer dedicated to providing authentic Japanese products for everyday elegance in Bangladesh.</p>
-                    <p class="text-lg"><span class="font-noto-serif-jp font-bold text-[#1A237E]">Kin</span> represents the connection between our customers and the authentic Japanese products we offer. We believe in bringing the elegance and quality of Japanese craftsmanship directly to your doorstep, enriching your daily life with products that are both beautiful and functional. Our brand embodies simplicity, quality, and a touch of traditional Japanese aesthetics blended with modern sophistication.</p>
+                    <p class="mb-4 text-lg">Welcome to the Kin Brand Guidelines. This document outlines the essential elements of the Kin brand, ensuring consistency and clarity in all our communications. Kin is an e-commerce retailer dedicated to providing elegant fashion accessories, including watches, sunglasses, and wallets, for your everyday style in Bangladesh.</p>
+                    <p class="text-lg"><span class="font-playfair-display font-bold text-[#1A237E]">Kin</span> represents the connection between our customers and the meticulously crafted fashion items we offer. We believe in bringing elegance, precision, and quality directly to your doorstep, enriching your daily style with accessories that are both beautiful and functional. Our brand embodies sophistication, quality, and modern fashion sensibilities.</p>
                 </div>
             </section>
 
@@ -124,7 +121,7 @@
                  <h1 class="text-4xl font-bold text-[#1A237E] mb-4">Logo</h1>
                  <div class="bg-white p-6 rounded-lg shadow-sm mb-6">
                     <h2 class="text-2xl font-bold mb-4">Primary Logo</h2>
-                    <p class="mb-6">The Kin logo is the cornerstone of our visual identity. It features a stylized "Kin" wordmark with a shopping bag icon integrated into the 'K', symbolizing our e-commerce nature and the products we deliver.</p>
+                    <p class="mb-6">The Kin logo is the cornerstone of our visual identity. It features a stylized "Kin" wordmark with a shopping bag icon integrated into the 'K', symbolizing our e-commerce nature and the fashion items we deliver.</p>
                     <div class="flex justify-center items-center bg-[#F0F0F0] p-8 rounded-lg">
                         <img src="./images/kin-logo-300-100.png" alt="Kin Primary Logo" class="max-w-full h-auto">
                     </div>
@@ -179,7 +176,7 @@
 
             <section id="colors" class="content-section">
                 <h1 class="text-4xl font-bold text-[#1A237E] mb-4">Color Palette</h1>
-                <p class="mb-6 text-lg bg-white p-6 rounded-lg shadow-sm">Our color palette is inspired by the elegance and simplicity of Japanese design, with a modern touch suitable for an e-commerce brand. Click on any swatch to copy the HEX code.</p>
+                <p class="mb-6 text-lg bg-white p-6 rounded-lg shadow-sm">Our color palette is inspired by elegance and simplicity, with a modern touch suitable for a fashion e-commerce brand. Click on any swatch to copy the HEX code.</p>
                 
                 <h2 class="text-2xl font-bold mb-3">Primary Colors</h2>
                 <div class="grid md:grid-cols-2 gap-6 mb-8">
@@ -229,7 +226,7 @@
             <section id="typography" class="content-section">
                 <h1 class="text-4xl font-bold text-[#1A237E] mb-4">Typography</h1>
                 <div class="bg-white p-6 rounded-lg shadow-sm">
-                    <p class="mb-6 text-lg">Our typography selection aims for readability, modernity, and a subtle nod to our Japanese inspiration. We use Inter for clarity and Noto Serif JP for elegance.</p>
+                    <p class="mb-6 text-lg">Our typography selection aims for readability, modernity, and a sophisticated feel. We use Inter for clarity and Playfair Display for elegance.</p>
 
                     <div class="mb-8">
                         <h2 class="text-2xl font-bold mb-2">Primary Typeface: Inter</h2>
@@ -243,11 +240,11 @@
                     </div>
 
                     <div class="mb-8">
-                        <h2 class="text-2xl font-bold mb-2">Secondary Typeface: Noto Serif JP</h2>
+                        <h2 class="text-2xl font-bold mb-2">Secondary Typeface: Playfair Display</h2>
                          <div class="p-4 border rounded-md">
-                            <p class="font-noto-serif-jp text-3xl font-bold">Noto Serif JP Bold</p>
-                            <p class="font-noto-serif-jp text-2xl">Noto Serif JP Regular</p>
-                            <p class="font-noto-serif-jp mt-4 text-xl">“Authentic Japanese products for your everyday elegance.”</p>
+                            <p class="font-playfair-display text-3xl font-bold">Playfair Display Bold</p>
+                            <p class="font-playfair-display text-2xl">Playfair Display Regular</p>
+                            <p class="font-playfair-display mt-4 text-xl">“Elegant fashion for your everyday style.”</p>
                         </div>
                     </div>
                     
@@ -258,7 +255,7 @@
                             <h2 class="text-2xl font-semibold mb-2">Heading 2 (Inter Semi-Bold)</h2>
                             <h3 class="text-xl font-medium mb-2">Heading 3 (Inter Medium)</h3>
                             <p class="text-base">This is body text in Inter Regular. It is clear and easy to read, forming the foundation of our content. It ensures a comfortable reading experience for all our customers.</p>
-                             <p class="font-noto-serif-jp mt-4 text-lg italic">This is a quote or subheading using Noto Serif JP for an elegant contrast.</p>
+                             <p class="font-playfair-display mt-4 text-lg italic">This is a quote or subheading using Playfair Display for an elegant contrast.</p>
                         </div>
                     </div>
                 </div>
@@ -267,33 +264,33 @@
             <section id="imagery" class="content-section">
                  <h1 class="text-4xl font-bold text-[#1A237E] mb-4">Imagery</h1>
                  <div class="bg-white p-6 rounded-lg shadow-sm">
-                    <p class="mb-6 text-lg">Imagery should reflect the elegance, authenticity, and quality of our Japanese products. The style is clean, minimalist, and uses high-quality product photography with natural lighting and simple backgrounds.</p>
+                    <p class="mb-6 text-lg">Imagery should reflect the elegance, sophistication, and quality of our fashion accessories (watches, sunglasses, wallets). The style is clean, minimalist, and uses high-quality product photography with natural lighting and simple backgrounds. Lifestyle shots should convey style, precision, and everyday elegance.</p>
                     <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
-                        <img src="https://placehold.co/600x400/F0F0F0/333333?text=Minimalist\nProduct+Shot" alt="Minimalist Product Shot" class="rounded-lg shadow-sm aspect-square object-cover">
-                        <img src="https://placehold.co/600x400/E0E0E0/333333?text=Lifestyle\nShot" alt="Lifestyle Shot" class="rounded-lg shadow-sm aspect-square object-cover">
-                        <img src="https://placehold.co/600x400/F5F5F5/333333?text=Craftsmanship\nDetail" alt="Craftsmanship Detail" class="rounded-lg shadow-sm aspect-square object-cover">
-                        <img src="https://placehold.co/600x400/EAEAEA/333333?text=Natural\nLighting" alt="Natural Lighting" class="rounded-lg shadow-sm aspect-square object-cover">
-                        <img src="https://placehold.co/600x400/F9F9F9/333333?text=Simple\nBackground" alt="Simple Background" class="rounded-lg shadow-sm aspect-square object-cover">
-                        <img src="https://placehold.co/600x400/DDDDDD/333333?text=Authentic\nFeel" alt="Authentic Feel" class="rounded-lg shadow-sm aspect-square object-cover">
+                        <img src="https://placehold.co/600x400/F0F0F0/333333?text=Elegant\nWatch+Shot" alt="Elegant Watch Shot" class="rounded-lg shadow-sm aspect-square object-cover">
+                        <img src="https://placehold.co/600x400/E0E0E0/333333?text=Stylish\nSunglasses" alt="Stylish Sunglasses" class="rounded-lg shadow-sm aspect-square object-cover">
+                        <img src="https://placehold.co/600x400/F5F5F5/333333?text=Premium\nWallet" alt="Premium Wallet" class="rounded-lg shadow-sm aspect-square object-cover">
+                        <img src="https://placehold.co/600x400/EAEAEA/333333?text=Fashion\nLifestyle" alt="Fashion Lifestyle" class="rounded-lg shadow-sm aspect-square object-cover">
+                        <img src="https://placehold.co/600x400/F9F9F9/333333?text=Detail\nShot" alt="Detail Shot" class="rounded-lg shadow-sm aspect-square object-cover">
+                        <img src="https://placehold.co/600x400/DDDDDD/333333?text=Accessory\nGrouping" alt="Accessory Grouping" class="rounded-lg shadow-sm aspect-square object-cover">
                     </div>
                 </div>
             </section>
 
             <section id="tone" class="content-section">
                 <h1 class="text-4xl font-bold text-[#1A237E] mb-4">Tone of Voice</h1>
-                <p class="mb-6 text-lg bg-white p-6 rounded-lg shadow-sm">Our tone of voice is elegant, informative, and inviting, reflecting the quality of our products and our commitment to our customers.</p>
+                <p class="mb-6 text-lg bg-white p-6 rounded-lg shadow-sm">Our tone of voice is elegant, sophisticated, and inviting, reflecting the quality and style of our fashion accessories and our commitment to our customers.</p>
                 <div class="grid md:grid-cols-3 gap-6">
                     <div class="bg-white p-6 rounded-lg shadow-sm">
-                        <h3 class="text-xl font-bold text-[#1A237E] mb-2">Elegant</h3>
-                        <p>Reflects the quality and sophistication of our products. Language is refined and thoughtful.</p>
+                        <h3 class="text-xl font-bold text-[#1A237E] mb-2">Elegant & Sophisticated</h3>
+                        <p>Reflects the premium quality and refined style of our fashion items. Language is polished and discerning, emphasizing craftsmanship and design.</p>
                     </div>
                     <div class="bg-white p-6 rounded-lg shadow-sm">
-                        <h3 class="text-xl font-bold text-[#1A237E] mb-2">Informative</h3>
-                        <p>Provides clear and concise information about our products and their benefits. Avoids jargon.</p>
+                        <h3 class="text-xl font-bold text-[#1A237E] mb-2">Informative & Precise</h3>
+                        <p>Provides clear and concise information about our products' features, materials, and benefits. Highlights the unique aspects of each watch, pair of sunglasses, or wallet.</p>
                     </div>
                      <div class="bg-white p-6 rounded-lg shadow-sm">
-                        <h3 class="text-xl font-bold text-[#1A237E] mb-2">Inviting</h3>
-                        <p>Creates a welcoming and trustworthy experience. Language is warm, respectful, and customer-focused.</p>
+                        <h3 class="text-xl font-bold text-[#1A237E] mb-2">Inviting & Inspirational</h3>
+                        <p>Creates a welcoming and trustworthy experience, inspiring customers to elevate their everyday style. Language is warm, respectful, and customer-focused, encouraging exploration of our collections.</p>
                     </div>
                 </div>
             </section>
@@ -311,7 +308,7 @@
                     <div class="p-6">
                         <div id="app-website" class="app-tab-content">
                             <h3 class="text-xl font-bold mb-2">Website & E-commerce</h3>
-                            <p class="mb-4">The website uses a clean, intuitive layout. Primary colors dominate, with Accent Gold for key calls-to-action. Inter is used for all primary text for maximum readability.</p>
+                            <p class="mb-4">The website uses a clean, intuitive layout, designed to showcase our fashion accessories prominently. Primary colors dominate, with Accent Gold for key calls-to-action. Inter is used for all primary text for maximum readability, ensuring a seamless shopping experience for watches, sunglasses, and wallets.</p>
                             <div class="w-full h-64 bg-[#F0F0F0] rounded-md border-2 border-gray-300 p-4">
                                 <div class="h-8 bg-white rounded-sm mb-4 flex items-center justify-between px-4">
                                     <div class="w-16 h-4 bg-[#1A237E] rounded-sm"></div>
@@ -324,12 +321,12 @@
                                 <div class="w-2/3 h-6 bg-gray-300 rounded-sm mb-2"></div>
                                 <div class="w-full h-4 bg-gray-200 rounded-sm mb-2"></div>
                                 <div class="w-full h-4 bg-gray-200 rounded-sm"></div>
-                                <button class="mt-4 bg-[#D4AF37] text-black text-sm font-bold py-2 px-4 rounded">Shop Now</button>
+                                <button class="mt-4 bg-[#D4AF37] text-black text-sm font-bold py-2 px-4 rounded">Explore Collections</button>
                             </div>
                         </div>
                         <div id="app-social" class="app-tab-content hidden">
                             <h3 class="text-xl font-bold mb-2">Social Media</h3>
-                            <p class="mb-4">Visuals are consistent and high-quality. The logo is used subtly. The tone of voice is engaging and informative. Use hashtags like #KinBangladesh and #JapaneseElegance.</p>
+                            <p class="mb-4">Visuals are consistent and high-quality, focusing on lifestyle and fashion trends featuring our watches, sunglasses, and wallets. The logo is used subtly. The tone of voice is engaging and informative, inspiring style and elegance. Use hashtags like #KinBangladeshFashion, #EverydayElegance, and #KinAccessories.</p>
                              <div class="w-full h-64 bg-[#F0F0F0] rounded-md border-2 border-gray-300 p-4 flex justify-center items-center">
                                  <div class="w-48 h-56 bg-white rounded-lg shadow-md p-2">
                                      <div class="w-full h-24 bg-gray-300 rounded"></div>
@@ -341,11 +338,11 @@
                         </div>
                         <div id="app-packaging" class="app-tab-content hidden">
                             <h3 class="text-xl font-bold mb-2">Packaging</h3>
-                            <p class="mb-4">Packaging design is minimalist and elegant, using premium, eco-friendly materials. It features the Kin Navy Blue and Black, with the logo displayed prominently.</p>
+                            <p class="mb-4">Packaging design is minimalist and elegant, using premium, eco-friendly materials suitable for luxury fashion accessories. It features the Kin Navy Blue and Black, with the logo displayed prominently, enhancing the unboxing experience for watches, sunglasses, and wallets.</p>
                             <div class="w-full h-64 bg-[#F0F0F0] rounded-md border-2 border-gray-300 p-4 flex justify-center items-center">
-                                 <div class="w-40 h-56 bg-[#D4AF37] rounded-lg shadow-md flex flex-col justify-center items-center p-4">
+                                 <div class="w-40 h-56 bg-[#1A237E] rounded-lg shadow-md flex flex-col justify-center items-center p-4">
                                       <img src="./images/kin-logo.png" alt="Kin Logo on Packaging" class="h-8 w-auto">
-                                    <p class="font-noto-serif-jp text-black text-xs mt-4">Everyday Elegance</p>
+                                    <p class="font-playfair-display text-white text-xs mt-4">Everyday Elegance</p>
                                  </div>
                              </div>
                         </div>
